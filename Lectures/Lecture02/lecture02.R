@@ -55,15 +55,10 @@ fsize.RF <- function(n, m, q, samples) {
   #Initial infectives
   yj <- matrix(data=m,nrow=samples,ncol=1) 
 
-  #Loop over all (samples) simulations until they all
-  #are ceased.
-  while (sum((yj>0)) & sum((xj>0))) {
+  #Loop over all (samples) simulations until they all are ceased.
+  while (sum(yj>0) & sum(xj>0)) {
     #Sample from all processes concurrently
-    yj <- rbinom(samples,xj,1-(q^yj))
-    
-    #If xj=0 the particular process gives NA's. We need to fix this.
-    yj[is.na(yj)] <- 0
-
+    yj <- ifelse(xj > 0, rbinom(samples,xj,1-(q^yj)), 0)
     #Update all xj
     xj <- xj - yj
   }
@@ -197,8 +192,8 @@ l <- function(w.logit,x,y) {
   if (length(x) != length(y)) { stop("x and y need to be the same length") }
   K <- length(x)
   w <- plogis(w.logit)
-  theta <- 1 - (1-w)^y
-  return(sum(dbinom( y[-1], size=x[-K], prob=theta[-K],log=TRUE)))
+  p <- 1 - (1-w)^y
+  return(sum(dbinom( y[-1], size=x[-K], prob=p[-K],log=TRUE)))
 }
 
 # Epidemic D in Table 4.1 of Daley and Gani (1999), assuming all susceptibles got infected
