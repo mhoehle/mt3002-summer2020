@@ -261,9 +261,7 @@ sir <- function(t,y, parms) {
   return(list(c(S=-beta*S*I,I=beta*S*I-gamma*I)))
 }
 
-
 ## -----------------------------------------------------------------------------
-
 gamma <- 0.3
 ## beta.grid <- c(0.001,0.00005, 0.00003)
 beta.grid <- c(1.5e-04, 4.5e-05, 3.0e-05)
@@ -287,26 +285,6 @@ leg <- c(as.expression(substitute(beta==val,list(val=beta.grid.str[1]))),as.expr
 legend(x="topright",legend=leg,lty=1,lwd=3,col=pal)
 
 
-
-## ----fig.width=7,fig.height=4.5, fig.align="center"---------------------------
-S <- sapply(beta.grid, function(beta) {
-  lsoda(y=c(N-1,1), times=times, func=sir,parms=c(beta,gamma))[,2]
-})
-pal <- brewer.pal(length(beta.grid),"Set1")
-matplot(times,S,type="l",lwd=3,lty=1,col=pal,xlab="time",ylab="S(t)")
-legend(x="topright",legend=leg,lty=1,lwd=3,col=pal)
-
-
-## ----echo=FALSE---------------------------------------------------------------
-
-N <- 21500
-#sumy <- sum(csfv$I)
-sumy <- 429
-f <- sumy/N
-R0 <- -log(1-f)/f
-
-
-
 ## ----echo=TRUE----------------------------------------------------------------
 ##############################################################################
 # Function to compute the derivative of the ODE system
@@ -326,6 +304,51 @@ sir <- function(t,y, parms) {
   I <- y[2]
   return(list(c(S=-beta*S*I,I=beta*S*I-gamma*I)))
 }
+
+
+## ----echo=TRUE, results="show"------------------------------------------------
+sim <- lsoda(y=c(N-1,1), times=times, func=sir,parms=c(beta.grid[1],gamma))
+head(sim, n=3)
+
+
+## ----echo=TRUE----------------------------------------------------------------
+# Step width of the Euler method
+h <- 0.1
+y <- matrix(NA, nrow=ceiling(20/h), ncol=3, dimnames=list(NULL, c("t","S","I")))
+# Initial value
+y[1,] <- c(0,N-1,1)
+# Loop
+for (i in 2:nrow(y)){
+  y[i,] <- c(y[i-1,"t"]+h, y[i-1,c("S","I")] +
+         h * sir(y[i-1,"t"], y[i-1,c("S","I")], parms=c(beta.grid[1],gamma))[[1]])
+}
+
+
+## -----------------------------------------------------------------------------
+# Show Euler solve
+plot(y[,"t"], y[,"I"], type="l", xlab="time", ylab="I(t)")
+# Add lsoda (which uses a more advanced method)
+lines(times, lsoda(y=c(N-1,1), times=times, func=sir,parms=c(beta.grid[1],gamma))[,3], col="#377EB8")
+legend(x="topright", c("Euler-method (h=0.1)", "lsoda"), col=c(1,"#377EB8"), lty=1)
+title(substitute(beta == a, list(a=beta.grid[1])))
+
+
+## ----fig.width=7,fig.height=4.5, fig.align="center"---------------------------
+S <- sapply(beta.grid, function(beta) {
+  lsoda(y=c(N-1,1), times=times, func=sir,parms=c(beta,gamma))[,2]
+})
+pal <- brewer.pal(length(beta.grid),"Set1")
+matplot(times,S,type="l",lwd=3,lty=1,col=pal,xlab="time",ylab="S(t)")
+legend(x="topright",legend=leg,lty=1,lwd=3,col=pal)
+
+
+## ----echo=FALSE---------------------------------------------------------------
+
+N <- 21500
+#sumy <- sum(csfv$I)
+sumy <- 429
+f <- sumy/N
+R0 <- -log(1-f)/f
 
 
 
@@ -420,7 +443,7 @@ legend(x="topright",c("CSFV outbreak","LS fit", "LS-sqrt fit", "Poisson fit"),lt
 #  m - initial number of infectives
 ######################################################################
 
-rSIR <- function(T,beta,gamma,n,m) {
+rSIR <- function(T, beta, gamma, n, m) {
   #Initialize (x= number of susceptibles)
   t <- 0
   x <- n
@@ -459,7 +482,7 @@ nSim <- 10
 #Do a few simulations
 set.seed(124)
 trajs <- lapply( 1:nSim, function (x) {
-    rSIR(T,beta=beta,gamma=gamma,n=S0,m=1)
+    rSIR(T, beta=beta, gamma=gamma, n=S0, m=1)
 })
 
 
@@ -473,4 +496,30 @@ for (i in 1:length(trajs)) {
 
 
 ## ----echo=TRUE, code = capture.output(dump('rSIR', ''))-----------------------
+
+
+## ----COMPARE------------------------------------------------------------------
+compare <- function(S0) {
+  # Simulate 250
+  trajs <- lapply(1:250, function(x) rSIR(T, beta=beta, gamma=gamma, n=S0, m=1))
+  max_T <- max(unlist(lapply(trajs, function(traj) max(traj$t))))
+  max_Y <- max(unlist(lapply(trajs, function(traj) max(traj$y))))
+  for (i in 1:length(trajs)) {
+    plotf <- if (i==1) plot else lines
+    plotf(trajs[[i]]$t,trajs[[i]]$y,type="s",ylim=c(0,max_Y),xlab="Time",ylab="Susceptibles",xlim=c(0,max_T),col=rgb(0,0,0,0.2))
+  }
+  # Solve ODE
+  sim <- lsoda(y=c(S0,1), times=times, func=sir,parms=c(beta,gamma))
+  lines(sim[,"time"], sim[,3], col="#377EB8", lwd=2)
+  invisible()
+}
+compare(S0=S0)
+
+## ----eval=FALSE---------------------------------------------------------------
+## # Compare for different S0
+## par(mfcol=c(2,1))
+## compare(S0=100)
+## title("S(0) = 100, m=1")
+## compare(S0=500)
+## title("S(0) = 500, m=1")
 
