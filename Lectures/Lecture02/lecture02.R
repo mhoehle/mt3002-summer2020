@@ -40,7 +40,7 @@ Lc <- function(theta) {
 # Parameters:
 #  n - Initial number of susceptible
 #  m - Initial infected
-#  q - avoidance probability, c.f. Britton2000 p.4
+#  w - contact probability, c.f. Britton2000 p.4
 #  samples - number of RF processes to sample.
 #
 # Note:
@@ -49,7 +49,7 @@ Lc <- function(theta) {
 # are taken care of.
 #############################################################################
 
-fsize.RF <- function(n, m, q, samples) {
+fsize.RF <- function(n, m, w, samples) {
   #Initial susceptible
   xj <- matrix(data=n,nrow=samples,ncol=1) 
   #Initial infectives
@@ -58,7 +58,7 @@ fsize.RF <- function(n, m, q, samples) {
   #Loop over all (samples) simulations until they all are ceased.
   while (sum(yj>0) & sum(xj>0)) {
     #Sample from all processes concurrently
-    yj <- ifelse(xj > 0, rbinom(samples,xj,1-(q^yj)), 0)
+    yj <- ifelse(xj > 0, rbinom(samples, xj, 1-(1-w)^yj), 0)
     #Update all xj
     xj <- xj - yj
   }
@@ -109,10 +109,10 @@ fsize.SIR <- function(n,m,lambda,phi) {
 
 
 fsize.hist <- function(n=50,m=1,lambda=1.5,samples=10000,ylim=NULL,plot=TRUE, title=TRUE) {
-  #RF by simulation, note q=exp(-lambda/(n+m)?? Does not appear so.
+  #RF by simulation, note q=exp(-lambda/(n)) is the avoidance probability. w=1-q.
   if (n>30) {
     cat("Sample size too large. Using simulation.\n")
-    f1 <- fsize.RF(n,m,exp(-lambda/(n)),samples)
+    f1 <- fsize.RF(n, m, 1 - exp(-lambda/(n)),samples)
     f2 <- table(factor(f1,levels=0:n))/length(f1)
   } else {
     #Use exact method
