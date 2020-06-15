@@ -200,7 +200,7 @@ l <- function(w.logit,x,y) {
 y <- c(1, 4, 14, 10, 1, 0)
 x <- numeric(length(y))
 x[1] <- sum(y[-1])
-x[2:length(x)] <- x[1]-cumsum(y[-length(y)])
+x[2:length(x)] <- x[1]-cumsum(y[2:length(y)])
 
 mle <- optim(par=0,fn=l,method="BFGS",x=x,y=y,control=list(fnscale=-1),hessian=TRUE)
 # Maximum likelihood estimator
