@@ -506,7 +506,7 @@ compare <- function(S0) {
   max_Y <- max(unlist(lapply(trajs, function(traj) max(traj$y))))
   for (i in 1:length(trajs)) {
     plotf <- if (i==1) plot else lines
-    plotf(trajs[[i]]$t,trajs[[i]]$y,type="s",ylim=c(0,max_Y),xlab="Time",ylab="Susceptibles",xlim=c(0,max_T),col=rgb(0,0,0,0.2))
+    plotf(trajs[[i]]$t,trajs[[i]]$y,type="s",ylim=c(0,max_Y),xlab="Time",ylab="No. of infective",xlim=c(0,max_T),col=rgb(0,0,0,0.2))
   }
   # Solve ODE
   sim <- lsoda(y=c(S0,1), times=times, func=sir,parms=c(beta,gamma))
