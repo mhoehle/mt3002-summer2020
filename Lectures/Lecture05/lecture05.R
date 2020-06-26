@@ -23,9 +23,10 @@ options(width=100)
 set.seed(123)
 library(tidyverse)
 library(RColorBrewer)
+library(lubridate)
 
 
-## ----fig="hide", results="hide"-----------------------------------------------
+## ----fig.show="hide", results="hide"------------------------------------------
 # Confirm theory by simulation
 beta <- 2.5
 gamma <- 1
@@ -243,6 +244,10 @@ out_epiestim <- ts_df %>% mutate(Date= as.Date(Date)) %>%
   # Ensure all reports are there (6 days back, this is rather conservative)
   filter(dates <= Sys.Date()-6) 
 
+# From the FOHM report: Här har vi använt det skattade serieintervallet från Nishiura et al.
+# (2020) med ett medelvärde på 4.8 dagar och en standaravvikelse på 2.3 dagar.
+# Note: Weibull distribution in the Nishiura et al. paper vs. (shifted) gamma in EpiEstim
+
 # Estimate the instantaneous R_0 - no smoothing
 res1 <- EpiEstim::estimate_R(out_epiestim, method = "parametric_si",
                             config=make_config(mean_si = 4.8, std_si = 2.3,
@@ -275,6 +280,48 @@ ggplot(rt_df, aes(x=Date, y=R_hat)) +
   ylab(expression(R(t)))  +
   geom_hline(yintercept=1, lty=2, col="salmon2") +
   facet_wrap(~ method, ncol=1)
+
+
+## ----scrape_tests-------------------------------------------------------------
+#######
+# Scrape the weekly FOHM data on testing in order to compute proportion 
+#######
+
+library(rvest)
+# Extract table with the number of test results results from round 1
+results <- read_html("https://www.folkhalsomyndigheten.se/smittskydd-beredskap/utbrott/aktuella-utbrott/covid-19/antal-individer-som-har-testats-for-covid-19/")
+
+tests <- results %>%
+  html_nodes(css = "table , caption") %>%
+  .[[1]] %>%
+  html_table(header = 1) %>%
+  as_tibble()
+
+# As table
+tests <- tests %>%
+  head(n = -1) %>%
+  mutate(week = str_replace(Vecka, "vecka ", ""), 
+         n_tested = str_replace(`Testade individer`," ", "")) %>% mutate_at(c("week", "n_tested"), as.numeric) %>% select(week, n_tested)
+
+ts_week <- ts_df %>% mutate(week = week(Date)) %>% group_by(week) %>% 
+  summarise(n_positive = sum(Totalt_antal_fall, na.rm=TRUE))
+
+tab <- inner_join(tests, ts_week, by=c("week")) %>% mutate(prop_positive = n_positive / n_tested)
+
+## ----plottests, fig.height=4--------------------------------------------------
+p1 <- ggplot(tab, aes(x = as.integer(week), y = n_tested)) +
+  geom_col() +
+  ylim(0, NA) +
+  xlab("Week") +
+  scale_x_continuous(breaks = min(tab$week):max(tab$week)) +
+  theme_minimal()
+p2 <- ggplot(tab, aes(x = as.integer(week), y = n_positive / n_tested)) +
+  geom_line() +
+  xlab("Week") +
+  scale_y_continuous(labels = scales::percent, limit = c(0, NA)) +
+  scale_x_continuous(breaks = min(tab$week):max(tab$week)) +
+  theme_minimal()
+gridExtra::grid.arrange(p1,p2, ncol=2)
 
 
 ## ----calcrtgermany------------------------------------------------------------
