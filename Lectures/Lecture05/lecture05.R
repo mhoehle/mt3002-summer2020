@@ -275,6 +275,7 @@ rt_df <- rbind(rt_irt7_df, rt_irt1_df)
 ggplot(rt_df, aes(x=Date, y=R_hat)) + 
   geom_ribbon(aes(ymin=lower, ymax=upper), fill="steelblue", alpha=0.2) +
   geom_line() +
+  xlab("Date (of report)") +
   scale_x_date(breaks = seq(as.Date("2020-03-16"), as.Date("2020-06-30"),by="1 week"), date_labels = "%b %d") +
   coord_cartesian(xlim=c(as.Date("2020-03-20"), NA), ylim=c(0, 2)) +
   ylab(expression(R(t)))  +
@@ -283,9 +284,11 @@ ggplot(rt_df, aes(x=Date, y=R_hat)) +
 
 
 ## ----scrape_tests-------------------------------------------------------------
-#######
+###############################################################
 # Scrape the weekly FOHM data on testing in order to compute proportion 
-#######
+# Note: The table only shows the last 10 weeks. Previous values are
+# however shown in the graphic available from https://www.folkhalsomyndigheten.se/smittskydd-beredskap/utbrott/aktuella-utbrott/covid-19/antal-individer-som-har-testats-for-covid-19/
+###############################################################
 
 library(rvest)
 # Extract table with the number of test results results from round 1
@@ -357,6 +360,7 @@ p1 <- ggplot(out_epiestim, aes(x=dates, y=I)) + geom_col() +
 
 p2 <- ggplot(rt_df, aes(x=Date, y=R_hat)) + 
   geom_ribbon(aes(ymin=lower, ymax=upper), fill="steelblue", alpha=0.2) +
+  xlab("Date (of symptom onset)") +
   geom_line() +
   scale_x_date(breaks = seq(as.Date("2020-03-02"), as.Date("2020-06-30"),by="1 week"), date_labels = "%b %d") +
   coord_cartesian(xlim=c(as.Date("2020-03-02"), NA), ylim=c(0, 2)) +
