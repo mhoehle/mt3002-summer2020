@@ -285,7 +285,7 @@ plotConvolution <- function(sts, ...) {
 #Fix seed value for generating the example
 set.seed(1234)
 #Sample disease incubation times from PMF
-D <- sample(d.grid,size=n.l,prob=d.pmf, replace=TRUE)
+D <- sample(d.grid, size=n.l, prob=d.pmf, replace=TRUE)
 #Example 2: Sample when infected in the interval where source is active
 t.exposure <- sample(seq(t0,t0+l-1,by=1),size=n.l,replace=TRUE)
 
@@ -318,7 +318,6 @@ plotConvolution(stsl,ylim=NULL)
 ##     Sys.sleep(0.1)
 ##   }
 ## }
-## 
 
 
 ## ----echo=TRUE,cache=TRUE,tidy=FALSE------------------------------------------
@@ -388,6 +387,8 @@ plotIt2 <- function(which) {
 
 ## -----------------------------------------------------------------------------
 plotIt2("4")
+
+
 
 
 ## ----results='markup'---------------------------------------------------------
