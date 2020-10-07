@@ -1,4 +1,4 @@
-# mt3002-summer2020
+# The Mathematics and Statistics of Infectious Disease Outbreaks
 
 ![](Assets/SUlogo_small.png)
 
