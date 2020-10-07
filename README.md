@@ -2,10 +2,12 @@
 
 ![](Assets/SUlogo_small.png)
 
-Code repository for the MT3002 summer 2020 course on "The Mathematics and Statistics of Infectious Disease Outbreaks" given at the [Department of Mathematics, Stockholm University, Sweden](https://www.math.su.se), given by [Tom Britton](https://staff.math.su.se/tom.britton/) and [Michael Höhle](https://staff.math.su.se/hoehle).
+Repository for the MT3002 summer 2020 course on "The Mathematics and Statistics of Infectious Disease Outbreaks" given at the [Department of Mathematics, Stockholm University, Sweden](https://www.math.su.se), given by [Tom Britton](https://staff.math.su.se/tom.britton/) and [Michael Höhle](https://staff.math.su.se/hoehle).
 
-Pre-requisites for the course are undergraduate mathematics (differential equations, matrix algebra) and statistics (randome variables, distributions, maximum likelihood inference) as well as some programming skills in a language with a data science component (python, R, Julia, matlab, ...).
+### Pre-requisites for the course 
+Undergraduate mathematics (differential equations, matrix algebra) and statistics (randome variables, distributions, maximum likelihood inference) knowlecge as well as some programming skills in a language with a data science component (python, R, Julia, matlab, ...).
 
+### License 
 The folder "lectures" contains the R code used to generate the lectures slides (provided as PDF) of selected lectures of the course.
 Video recording of the lectures is also available. The content of the slides etc is available under a [Creative Commons 3.0 Attribute-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/). The code is available under a [GNU GPL v3.0 license](https://www.gnu.org/licenses/gpl-3.0.html). The video lectures are copyright (c) Tom Britton and Michael Höhle, respectively.
 
