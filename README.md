@@ -1,5 +1,7 @@
 # mt3002-summer2020
 
+![](Assets/SUlogo_small.png)
+
 Code repository for the MT3002 summer 2020 course on "The Mathematics and Statistics of Infectious Disease Outbreaks" given at the [Department of Mathematics, Stockholm University, Sweden](https://www.math.su.se), given by [Tom Britton](https://staff.math.su.se/tom.britton/) and [Michael Höhle](https://staff.math.su.se/hoehle).
 
 Pre-requisites for the course are undergraduate mathematics (differential equations, matrix algebra) and statistics (randome variables, distributions, maximum likelihood inference) as well as some programming skills in a language with a data science component (python, R, Julia, matlab, ...).
