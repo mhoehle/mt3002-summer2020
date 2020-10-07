@@ -16,7 +16,7 @@ Video recording of the lectures is also available. The content of the slides etc
 
 The video lectures are publically available from a corresponding [channel](https://video.su.se/channel/The%2BMath%2Band%2BStats%2Bof%2BInfectious%2BDisease%2BOutbreaks/356471) from the [video server](https://video.su.se) of Stockholm University. Additionally, for better distributed access, lectures are also available from a [YouTube channel](https://www.youtube.com/watch?v=noNyOwIlBrY&list=PLl_ncesshp_C-URStf-LwhYCbFGE70_jq).
 
-* Introduction to the Lecture [Intro](https://video.su.se/media/t/0_rqwxd9zg)
+* Introduction to the Lecture [[Intro](https://video.su.se/media/t/0_rqwxd9zg)]
 * L05: Effective Reproduction Number [[Part 1](https://video.su.se/media/L05+-+Effective+Reproduction+Number+%281+2%29/0_u3b1j7rk) | [Part 2](https://video.su.se/media/L05+-+Effective+Reproduction+Number+%282+2%29/0_38cwcho8)]
 * L06: Latencies and Delays [[Part 1](https://video.su.se/media/+L06+-+Latencies+and+Delays+%281+2%29/0_vrzkcn4s) | [Part 2](https://video.su.se/media/L06+-+Latencies+and+Delays+%282+2%29/0_0xu0jgzy)]
 * L12: Digital Contact Tracing [[Part 1](https://video.su.se/media/L12+-+Digital+Contact+Tracing+%281+2%29/0_9chh75x5) | [Part 2](https://video.su.se/media/L12+-+Digital+Contact+Tracing+%282+2%29/0_pbdfeaov)]
