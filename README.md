@@ -5,7 +5,7 @@
 Repository for the MT3002 summer 2020 course on "The Mathematics and Statistics of Infectious Disease Outbreaks" given at the [Department of Mathematics, Stockholm University, Sweden](https://www.math.su.se), given by [Tom Britton](https://staff.math.su.se/tom.britton/) and [Michael Höhle](https://staff.math.su.se/hoehle).
 
 ### Pre-requisites for the course 
-Undergraduate mathematics (differential equations, matrix algebra) and statistics (randome variables, distributions, maximum likelihood inference) knowlecge as well as some programming skills in a language with a data science component (python, R, Julia, matlab, ...).
+Undergraduate mathematics (differential equations, matrix algebra) and statistics (randome variables, distributions, maximum likelihood inference) knowledge as well as some programming skills in a language with a data science component (python, R, Julia, matlab, ...).
 
 ### License 
 The folder "lectures" contains the R code used to generate the lectures slides (provided as PDF) of selected lectures of the course.
