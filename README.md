@@ -18,6 +18,8 @@ The video lectures are publically available from a corresponding [channel](https
 
 * Introduction to the Course [[Tom Britton](https://video.su.se/media/Introduction+to+the+Course+%28Tom+Britton%29/0_scrd1q6o/356471) | [Michael Höhle](https://video.su.se/media/t/0_rqwxd9zg)]
 * L01: Mathematical Modelling [[Part 1](https://video.su.se/edit/0_g9pf4rnh) | [Part 2](https://video.su.se/media/L01+-+Mathematical+Modelling+%282+2%29/0_qdurs7hj)]
+* L02: Simulation and Fitting of Epidemic Models [[Part 1](https://video.su.se/media/L02+-+Simulation+and+Fitting+of+Epidemic+Models+%281+3%29/0_j0v2lslj) | [Part 2](https://video.su.se/media/L02+-+Simulation+and+Fitting+of+Epidemic+Models+%282+3%29/0_p4629rt7) | [Part 3](https://video.su.se/media/L02+-+Simulation+and+Fitting+of+Epidemic+Models+%283+3%29/0_3yjyzq0q)]
+* L03: Timing and observations + Endemic models [[Part 1](https://video.su.se/media/L03+-+Timing+and+observations+%2B+Endemic+models+%281+2%29/0_10homfzz) | [Part 2](https://video.su.se/media/L03+-+Timing+and+observations+%2B+Endemic+models+%282+2%29/0_1p5i3vsj/356471)]
 * L05: Effective Reproduction Number [[Part 1](https://video.su.se/media/L05+-+Effective+Reproduction+Number+%281+2%29/0_u3b1j7rk) | [Part 2](https://video.su.se/media/L05+-+Effective+Reproduction+Number+%282+2%29/0_38cwcho8)]
 * L06: Latencies and Delays [[Part 1](https://video.su.se/media/+L06+-+Latencies+and+Delays+%281+2%29/0_vrzkcn4s) | [Part 2](https://video.su.se/media/L06+-+Latencies+and+Delays+%282+2%29/0_0xu0jgzy)]
 * L12: Digital Contact Tracing [[Part 1](https://video.su.se/media/L12+-+Digital+Contact+Tracing+%281+2%29/0_9chh75x5) | [Part 2](https://video.su.se/media/L12+-+Digital+Contact+Tracing+%282+2%29/0_pbdfeaov)]
