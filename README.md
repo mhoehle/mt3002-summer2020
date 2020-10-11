@@ -11,6 +11,9 @@ Undergraduate mathematics (differential equations, matrix algebra) and statistic
 The folder "lectures" contains the R code used to generate the lectures slides (provided as PDF) of selected lectures of the course.
 Video recording of the lectures is also available. The content of the slides etc is available under a [Creative Commons 3.0 Attribute-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/). The code is available under a [GNU GPL v3.0 license](https://www.gnu.org/licenses/gpl-3.0.html). The video lectures are copyright (c) Tom Britton and Michael Höhle, respectively.
 
+## Lecture Slides
+
+PDFs of the individual lectures is available [here](https://github.com/hoehleatsu/mt3002-summer2020/tree/master/Lectures). 
 
 ## Video Lectures
 
@@ -25,3 +28,6 @@ The video lectures are publically available from a corresponding [channel](https
 * L06: Latencies and Delays [[Part 1](https://video.su.se/media/+L06+-+Latencies+and+Delays+%281+2%29/0_vrzkcn4s) | [Part 2](https://video.su.se/media/L06+-+Latencies+and+Delays+%282+2%29/0_0xu0jgzy)]
 * L12: Digital Contact Tracing [[Part 1](https://video.su.se/media/L12+-+Digital+Contact+Tracing+%281+2%29/0_9chh75x5) | [Part 2](https://video.su.se/media/L12+-+Digital+Contact+Tracing+%282+2%29/0_pbdfeaov)]
 
+## R Code
+
+R code to produce the graphs and tables of the lecture slides is available from the same [folders](https://github.com/hoehleatsu/mt3002-summer2020/tree/master/Lectures) as the lecture slides.
