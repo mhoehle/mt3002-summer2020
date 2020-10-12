@@ -10,10 +10,6 @@ Undergraduate knowledge of mathematics (e.g. differential equations, optimizatio
 
 Audience for the 2020 course were B.Sc. students in the natural science (statistics, mathematics, engineering, physics, ...), but we hope the material is also of interest for others, e.g., Ph.D. students in the field of epidemic modelling, infectious disease epidemiologists with a like for the quantitative side of matters, and those who just want to improve their armchair epidemiology skills.
 
-## Lecture Slides
-
-PDFs of the individual lectures is available [here](https://github.com/hoehleatsu/mt3002-summer2020/tree/master/Lectures). 
-
 ## Video Lectures
 
 The video lectures are publically available from a corresponding [channel](https://video.su.se/channel/The%2BMath%2Band%2BStats%2Bof%2BInfectious%2BDisease%2BOutbreaks/356471) at the [video server](https://video.su.se) of Stockholm University (don't forget to unmute the video). For a better distributed access, the lectures are also available from a [YouTube playlist](https://www.youtube.com/playlist?list=PLl_ncesshp_C-URStf-LwhYCbFGE70_jq).
@@ -33,6 +29,10 @@ Lectures were given in flipped classroom mode during July (L1-L7) and August (L8
 * L10: Multivariate Outbreak Detection [[Part 1](https://video.su.se/media/L10+-+Multivariate+outbreak+detection+%281+2%29/0_uithqyum) | [Part 2](https://video.su.se/media/L10+-+Multivariate+outbreak+detection+%282+2%29/0_mmol88iy)]
 * L11: COVID-19 (I): Reproduction Number and Herd Immunity [[Part 1](https://video.su.se/media/L11+-+COVID-19+%281+2%29/0_dk0ztmz6/356471) | [Part 2](https://video.su.se/media/L11+-+COVID-19+%282+2%29/0_j1xks7xm)]
 * L12: COVID-19 (II): Digital Contact Tracing [[Part 1](https://video.su.se/media/L12+-+Digital+Contact+Tracing+%281+2%29/0_9chh75x5) | [Part 2](https://video.su.se/media/L12+-+Digital+Contact+Tracing+%282+2%29/0_pbdfeaov)]
+
+## Lecture Slides
+
+PDFs of the individual lectures is available [here](https://github.com/hoehleatsu/mt3002-summer2020/tree/master/Lectures). 
 
 ## R Code
 
