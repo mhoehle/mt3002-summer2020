@@ -8,6 +8,8 @@ Repository for the MT3002 summer 2020 course on "The Mathematics and Statistics 
 
 Undergraduate knowledge of mathematics (e.g. differential equations) and statistics (e.g. random variables, distributions, maximum likelihood inference) as well as some programming skills in a language with a data science component (python, R, Julia, matlab, ...).
 
+Audience for the 2020 course were B.Sc. students in the natural science (statistics, mathematics, engineering, physics, ...), but we hope the material is also of interest for Ph.D. students in the field of epidemic modelling, for infectious disease epidemiologists with a like for the quantitative side of matters, and for those who just want to improve their armchair epidemiology skills.
+
 ## Lecture Slides
 
 PDFs of the individual lectures is available [here](https://github.com/hoehleatsu/mt3002-summer2020/tree/master/Lectures). 
