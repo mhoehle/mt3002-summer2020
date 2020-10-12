@@ -34,6 +34,9 @@ The video lectures are publically available from a corresponding [channel](https
 
 R code to produce the graphs and tables of the lecture slides is available for many of the lectures from the same [folders](https://github.com/hoehleatsu/mt3002-summer2020/tree/master/Lectures) as the lecture slides.
 
+## Homework
+
+Exercises for the written exam are scattered throughout the lecture slides. The two homework assignments can be found in the [Projects](https://github.com/hoehleatsu/mt3002-summer2020/tree/master/Projects) folder.
 ## License 
 
 Video recording of the lectures is also available. The content of the slides etc is available under a [Creative Commons 3.0 Attribute-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/). The code is available under a [GNU GPL v3.0 license](https://www.gnu.org/licenses/gpl-3.0.html). The video lectures are copyright (c) Tom Britton and Michael Höhle, respectively.
