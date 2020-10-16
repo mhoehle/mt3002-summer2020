@@ -12,7 +12,7 @@ Audience for the 2020 course were B.Sc. students in the natural science (statist
 
 ## Video Lectures
 
-The video lectures are publically available from a corresponding [channel](https://video.su.se/channel/The%2BMath%2Band%2BStats%2Bof%2BInfectious%2BDisease%2BOutbreaks/356471) at the [video server](https://video.su.se) of Stockholm University (don't forget to unmute the video). For a better distributed access, the lectures are also available from a [YouTube playlist](https://www.youtube.com/playlist?list=PLl_ncesshp_C-URStf-LwhYCbFGE70_jq).
+The video lectures are publicly available from a corresponding [channel](https://video.su.se/channel/The%2BMath%2Band%2BStats%2Bof%2BInfectious%2BDisease%2BOutbreaks/356471) at the [video server](https://video.su.se) of Stockholm University (don't forget to unmute the video). For a better distributed access, the lectures are also available from a [YouTube playlist](https://www.youtube.com/playlist?list=PLl_ncesshp_C-URStf-LwhYCbFGE70_jq).
 
 Lectures were given in flipped classroom mode during July (L1-L7) and August (L8-L12) of 2020. The recordings below served as preparation for an live Zoom meeting (not recorded), where we discussed the content of the lectures.
 
@@ -48,4 +48,4 @@ The content of the slides etc is available under a [Creative Commons 3.0 Attribu
 
 ## Feedback
 
-We would very much appretiate your feedback to the lectures and its material. Either as GitHub issues, pull requests or by comments on the respective videos.
+We would very much appreciate your feedback to the lectures and its material. Either as GitHub issues, pull requests or by comments on the respective videos.
