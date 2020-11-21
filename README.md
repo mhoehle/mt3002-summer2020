@@ -17,7 +17,7 @@ The video lectures are publicly available from a corresponding [channel](https:/
 Lectures were given in flipped classroom mode during July (L1-L7) and August (L8-L12) of 2020. The recordings below served as preparation for an live Zoom meeting (not recorded), where we discussed the content of the lectures.
 
 * Introduction to the Course [[Tom Britton](https://video.su.se/media/Introduction+to+the+Course+%28Tom+Britton%29/0_scrd1q6o/356471) | [Michael Höhle](https://video.su.se/media/t/0_rqwxd9zg)]
-* L01: Mathematical Modelling [[Part 1](https://video.su.se/edit/0_g9pf4rnh) | [Part 2](https://video.su.se/media/L01+-+Mathematical+Modelling+%282+2%29/0_qdurs7hj)]
+* L01: Mathematical Modelling [[Part 1](https://video.su.se/media/L01+-+Mathematical+Modelling+%281+2%29/0_g9pf4rnh/356471) | [Part 2](https://video.su.se/media/L01+-+Mathematical+Modelling+%282+2%29/0_qdurs7hj)]
 * L02: Simulation and Fitting of Epidemic Models [[Part 1](https://video.su.se/media/L02+-+Simulation+and+Fitting+of+Epidemic+Models+%281+3%29/0_j0v2lslj) | [Part 2](https://video.su.se/media/L02+-+Simulation+and+Fitting+of+Epidemic+Models+%282+3%29/0_p4629rt7) | [Part 3](https://video.su.se/media/L02+-+Simulation+and+Fitting+of+Epidemic+Models+%283+3%29/0_3yjyzq0q)]
 * L03: Timing and observations + Endemic models [[Part 1](https://video.su.se/media/L03+-+Timing+and+observations+%2B+Endemic+models+%281+2%29/0_10homfzz) | [Part 2](https://video.su.se/media/L03+-+Timing+and+observations+%2B+Endemic+models+%282+2%29/0_1p5i3vsj/356471)]
 * L04: Estimating Reproduction Numbers [[Part 1](https://video.su.se/media/L04+-+Estimation+reproduction+numbers+%281+2%29/0_w12jeszk) | [Part 2](https://video.su.se/media/L04+-+Estimating+Reproduction+Numbers+%282+2%29/0_bopogny5)]
